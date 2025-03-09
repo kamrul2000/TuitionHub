@@ -164,7 +164,7 @@
 
             <div class="form-group">
               <div class="col-md-6 col-sm-6 inputGroupContainer">
-                <h6>Sign Up As</h6>
+                <label>Sign Up As</label>
                 <div class="input-group">
                   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                   <select name="user_type" class="form-control" required>
@@ -174,7 +174,7 @@
                 </div>
               </div>
               <div class="col-md-6 col-sm-6 inputGroupContainer">
-                <h6>Full Name</h6>
+                <label>Full Name</label>
                 <div class="input-group">
                   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                   <input type="text" name="name" placeholder="Enter Your Name" class="form-control" required>
@@ -184,89 +184,109 @@
 
             <div class="form-group">
               <div class="col-md-6 col-sm-6 inputGroupContainer">
-                <h6>Email Address</h6>
-                <div class="input-group">
-                  <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                  <input type="email" name="email_id" placeholder="Enter Your Email" class="form-control" required>
-                </div>
-              </div>
-              <div class="col-md-6 col-sm-6 inputGroupContainer">
-                <h6>Create Password</h6>
-                <div class="input-group">
-                  <span class="input-group-addon"><i class="icofont icofont-ui-password"></i></span>
-                  <input type="password" name="password" placeholder="Enter a Strong Password" class="form-control" required>
-                </div>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <div class="col-md-6 col-sm-6 inputGroupContainer">
-                <h6>Mobile Number</h6>
+                <label>Mobile Number</label>
                 <div class="input-group">
                   <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
                   <input type="text" name="mobile" pattern="[6-9][0-9]{9}" minlength="10" maxlength="10" placeholder="Enter Mobile Number" class="form-control" required>
                 </div>
               </div>
-              <div class="col-md-6 col-sm-6 inputGroupContainer">
-                <h6>Current Location</h6>
-                <div class="input-group">
-                  <span class="input-group-addon"><i class="icofont icofont-location-pin"></i></span>
-<select name="location" data-live-search="true">
-    <option value="">----Select----</option>
-    <option value="Dhanmondi">Dhanmondi</option>
-    <option value="Gulshan">Gulshan</option>
-    <option value="Banani">Banani</option>
-    <option value="Uttara">Uttara</option>
-    <option value="Mirpur">Mirpur</option>
-    <option value="Mohammadpur">Mohammadpur</option>
-    <option value="Bashundhara">Bashundhara</option>
-    <option value="Baridhara">Baridhara</option>
-    <option value="Motijheel">Motijheel</option>
-    <option value="Puran Dhaka">Puran Dhaka</option>
-    <option value="Tejgaon">Tejgaon</option>
-    <option value="Khilgaon">Khilgaon</option>
-    <option value="Shahbagh">Shahbagh</option>
-    <option value="Jatrabari">Jatrabari</option>
-    <option value="Badda">Badda</option>
-    <option value="Rampura">Rampura</option>
-</select>                </div>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <div class="col-md-6 col-sm-6 inputGroupContainer">
-                <h6>Student Class</h6>
-               <select name="student_class" class="form-control" required>
-        <option value="">Select Class</option>
-        <option value="1">Class 1</option>
-        <option value="2">Class 2</option>
-        <option value="3">Class 3</option>
-        <option value="4">Class 4</option>
-        <option value="5">Class 5</option>
-        <option value="6">Class 6</option>
-        <option value="7">Class 7</option>
-        <option value="8">Class 8</option>
-        <option value="9">Class 9</option>
-        <option value="10">Class 10</option>
-        <option value="11">Class 11</option>
-        <option value="12">Class 12</option>
-        <option value="university">University Level</option>
-      </select>
-              </div>
-              <div class="col-md-6 col-sm-6 inputGroupContainer">
-                <h6>Male or Female Tutor Need?</h6>
-                <select name="tutor_gender" class="form-control" required>
-                  <option value="">Select</option>
-                  <option value="Male">Male</option>
-                  <option value="Female">Female</option>
-                  <option value="Any">Any</option>
+                <div class="col-md-6 col-sm-6 inputGroupContainer">
+                <label>Current Location</label>
+                <select name="location" class="form-control" data-live-search="true">
+                  <option value="">----Select----</option>
+                  <option value="Dhanmondi">Dhanmondi</option>
+                  <option value="Gulshan">Gulshan</option>
+                  <option value="Banani">Banani</option>
+                  <option value="Uttara">Uttara</option>
+                  <option value="Mirpur">Mirpur</option>
+                  <option value="Mohammadpur">Mohammadpur</option>
+                  <option value="Bashundhara">Bashundhara</option>
+                  <option value="Baridhara">Baridhara</option>
+                  <option value="Motijheel">Motijheel</option>
+                  <option value="Puran Dhaka">Puran Dhaka</option>
+                  <option value="Tejgaon">Tejgaon</option>
+                  <option value="Khilgaon">Khilgaon</option>
+                  <option value="Shahbagh">Shahbagh</option>
+                  <option value="Jatrabari">Jatrabari</option>
+                  <option value="Badda">Badda</option>
+                  <option value="Rampura">Rampura</option>
                 </select>
               </div>
             </div>
 
             <div class="form-group">
               <div class="col-md-6 col-sm-6 inputGroupContainer">
-                <h6>How many days/week?</h6>
+                <label>Student Class</label>
+                <select name="student_class" class="form-control" required>
+                  <option value="">----Select Class----</option>
+                  <option value="1">Class 1</option>
+                  <option value="2">Class 2</option>
+                  <option value="3">Class 3</option>
+                  <option value="4">Class 4</option>
+                  <option value="5">Class 5</option>
+                  <option value="6">Class 6</option>
+                  <option value="7">Class 7</option>
+                  <option value="8">Class 8</option>
+                  <option value="9">Class 9</option>
+                  <option value="10">Class 10</option>
+                  <option value="11">Class 11</option>
+                  <option value="12">Class 12</option>
+                  <option value="university">University Level</option>
+                </select>
+              </div>
+              <div class="col-md-6 col-sm-6 inputGroupContainer">
+                <label>Male or Female Tutor Need?</label>
+                <select name="tutor_gender" class="form-control" required>
+                  <option value="">----Select----</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Any">Any</option>
+                </select>
+              </div>
+            
+              
+            </div>
+
+            <div class="form-group">
+              <div class="col-md-6 col-sm-6 inputGroupContainer">
+                <label>----Select Medium----</label>
+                <select name="medium" class="form-control" required>
+                  <option value="">Select</option>
+                  <option value="English">English</option>
+                  <option value="Bangla">Bangla</option>
+                </select>
+              </div>
+              <div class="col-md-6 col-sm-6 inputGroupContainer">
+                <label>Subjects</label>
+                <select name="subject" class="form-control" data-live-search="true" required>
+                  <option value="">----Select----</option>
+                  <option value="Physics">Physics</option>
+                  <option value="Chemistry">Chemistry</option>
+                  <option value="Biology">Biology</option>
+                  <option value="Science">Science</option>
+                  <option value="Mathematics">Mathematics</option>
+                  <option value="Bangla">Bangla</option>
+                  <option value="English">English</option>
+                  <option value="ICT">ICT</option>
+                  <option value="Higher Math">Higher Math</option>
+                  <option value="Accounting">Accounting</option>
+                  <option value="Finance & Banking">Finance & Banking</option>
+                  <option value="All Subjects">All Subjects</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-6 col-sm-6 inputGroupContainer">
+                <label>Salary</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-usd"></i></span>
+                  <input type="text" name="salary" placeholder="Expected Salary Given" class="form-control" required>
+                </div>
+              </div>
+             
+              <div class="col-md-6 col-sm-6 inputGroupContainer">
+                <label>How many days/week?</label>
                 <select name="days_per_week" class="form-control" required>
                   <option value="">Select</option>
                   <option value="1">1 Day</option>
@@ -277,52 +297,17 @@
                   <option value="6">6 Days</option>
                 </select>
               </div>
-              <div class="col-md-6 col-sm-6 inputGroupContainer">
-                <h6>Salary</h6>
-                <input type="text" name="salary" placeholder="Expected Salary" class="form-control" required>
-              </div>
             </div>
 
             <div class="form-group">
               <div class="col-md-12 inputGroupContainer">
-                <h6>Subjects</h6>
-<select name="subject" data-live-search="true" class="form-control" required>
-    <option value="">----Select----</option>
-    <option value="Physics">Physics</option>
-    <option value="Chemistry">Chemistry</option>
-    <option value="Biology">Biology</option>
-    <option value="Science">Science</option>
-    <option value="Mathematics">Mathematics</option>
-    <option value="Bangla">Bangla</option>
-    <option value="English">English</option>
-    <option value="ICT">ICT (Information & Communication Technology)</option>
-    <option value="Higher Math">Higher Math</option>
-    <option value="Accounting">Accounting</option>
-    <option value="Finance & Banking">Finance & Banking</option>
-    <option value="Business Studies">Business Studies</option>
-    <option value="Economics">Economics</option>
-    <option value="History of Bangladesh & World Civilization">History of Bangladesh & World Civilization</option>
-    <option value="Geography & Environment">Geography & Environment</option>
-    <option value="Civics">Civics</option>
-    <option value="Psychology">Psychology</option>
-    <option value="Islamic Studies">Islamic Studies</option>
-    <option value="Arts & Crafts">Arts & Crafts</option>
-    <option value="Physical Education">Physical Education</option>
-    <option value="All Subjects">All Subjects</option>
-</select>              </div>
-            </div>
-
-            <div class="form-group">
-              <div class="col-md-12 inputGroupContainer">
-                <h6>Your Requirement (Short Note)</h6>
+                <label>Your Requirement (Short Note)</label>
                 <textarea name="requirement" placeholder="Write your requirement here..." class="form-control" required></textarea>
               </div>
             </div>
 
-            <div class="form-group">
-              <div class="col-md-12 pdg-top-bottom15">
-                <button type="submit" class="btn btn-primary btn-lg hvr-bounce-to-top">Create Account</button>
-              </div>
+            <div class="form-group text-center">
+              <button type="submit" class="btn btn-primary btn-lg">Create Account</button>
             </div>
           </div>
         </form>
@@ -330,6 +315,7 @@
     </div>
   </div>
 </div>
+
 
 
 
