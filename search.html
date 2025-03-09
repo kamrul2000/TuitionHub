@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="assets/images/favicon.png">
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/aos.css">
+<link rel="stylesheet" href="assets/css/icofont.min.css">
+<link rel="stylesheet" href="assets/css/animation.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107595243-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-107595243-1');
+</script>
+<script type="text/javascript">//<![CDATA[  (function() { var configuration = { "token": "c3500e41a7e2da82d752df423f16785b", "excludeDomains": [ "Tuitionindia.on" ], "capping": { "limit": 5, "timeout": 24 }, "exitScript": { "enabled": true }, "popUnder": { "enabled": true } }; var script = document.createElement('script'); script.async = true; script.src = '//cdn.shorte.st/link-converter.min.js'; script.onload = script.onreadystatechange = function () {var rs = this.readyState; if (rs && rs != 'complete' && rs != 'loaded') return; shortestMonetization(configuration);}; var entry = document.getElementsByTagName('script')[0]; entry.parentNode.insertBefore(script, entry); })(); //]]></script>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+  <div id="contacttutorModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+   <div class="modal-content">
+    <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          <h4 class="modal-title" id="myModalLabel">Contact</h4>
+        </div>   
+        <form  id="contact-form" action="#" method="post" class="contact-form-wrapper" data-toggle="validator">    
+    <div class="modal-body text-center">             
+         <input name="submit_contact" type="hidden" value="1" />
+          <input name="tutor_id" type="hidden" value="" />
+          <div class="form-group">
+            <input type="text" name="name" class="form-control" placeholder="Name"  required>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" class="form-control" placeholder="Email"  required>
+          </div>
+          <div class="form-group">
+            <input type="text" name="mobile" class="form-control" placeholder="Mobile"  required>
+          </div>
+          <div class="form-group">
+            <textarea rows="3" name="description" class="form-control" required placeholder="Description"></textarea>
+          </div>  
+        <div class="form-group message"></div>    
+    <button type="submit" class="btn btn-sm btn-blue" onclick="return contacttutorMail();">Submit</button>
+    </div>
+    </form>
+  </div>
+    </div>
+  </div>
+
+<div id="home"></div>
+<!-- <div class="page-mask">
+ <div class="loader">
+  <div class="line one"></div>
+  <div class="line two"></div>
+  <div class="line three"></div>
+  <div class="line four"></div>
+  <div class="line five"></div>
+ </div>
+</div> -->
+
+<style type="text/css">
+#getServiceModal .tutor-input{
+  display: none;
+}
+#getServiceModal .active{
+  display: block;
+}
+</style>
+<ul class="blink" data-toggle="modal" data-target="#enquiryModal">
+  <li>E</li>
+  <li>n</li>
+  <li>q</li>
+  <li>u</li>
+  <li>i</li>
+  <li>r</li>
+  <li>y</li>
+  <li>&nbsp;</li>
+  <li>f</li>
+  <li>o</li>
+  <li>r</li>
+  <li>&nbsp;</li>
+  <li>T</li>
+  <li>u</li>
+  <li>i</li>
+  <li>t</li>
+  <li>i</li>
+  <li>o</li>
+  <li>n</li>
+</ul>
+
+
+<!--Start Menu-->
+<nav class="navbar navbar-inverse" id="navbar">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" width="170" height="60" alt="Logo"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li >
+          <a class="bdr-center" href="index.html">Home</a>
+        </li>           
+        <li class="dropdown">
+          <a class="dropdown-toggle bdr-center" data-toggle="dropdown" href="#">About Us</a>
+          <ul class="dropdown-menu">
+            <li  >
+              <a href="about.html">About Company</a>
+            </li>
+            
+            <li >
+              <a href="how-it-works.html">How It Works</a>
+            </li>            
+          </ul>
+        </li>
+               
+        <li class="dropdown active">
+          <a class="dropdown-toggle bdr-center" data-toggle="dropdown" href="#">Services</a>
+          <ul class="dropdown-menu">
+            <li ><a href="paynow.html">Pay Now</a></li>
+            <li class="active"><a href="search.html">Search Tutor</a></li>
+            <li ><a href="tutor.html">Become A Tutor</a></li>
+          </ul>
+        </li>       
+        
+        <li >
+          <a class="bdr-center" href="contact.html">Contact Us</a>
+        </li>       
+        <li><a href="register.html" class="navbtn btn-info hvr-bounce-to-top">Sign Up</a> <a href="login.html" class="navbtn mybtn hvr-bounce-to-top">Log In</a></li>      </ul>
+    </div>
+  </div>
+</nav>
+<!--End Menu--><br>
+<div class="pdg-top-bottom30"></div>
+
+<div class="bg-gray">
+ <div class="container">
+<div class="row pdg-top-bottom30" 
+     style="display: flex; align-items: center; background: url(assets/images/teacher.webp) right center no-repeat;width: 70%;margin-top: 10px; background-size: contain;">
+    
+    <!-- Left side text -->
+    <div class="col-md-6 col-sm-12" style="padding: 30px;">
+        <h1 class="tutor-heading pdg-top-bottom30"><ins>Find</ins> Your Tutor</h1>
+       
+    </div>
+
+    <!-- Right side image (background covers this part) -->
+    <div class="col-md-6 col-sm-12"></div>
+
+</div>
+
+ </div>
+</div>
+
+<div class="bg-gray pdg-top-bottom15">
+ <div class="container">
+  <div class="row">
+   <div class="col-md-3 col-sm-4 col-xs-12 product-media i-sticky">
+    <div class="filter-tutor bg-white pdg-left-right20 pdg-top-bottom30 margin-top-bottom10" data-aos="fade-right">
+   <h3 class="tutor-heading"><ins>Search</ins></h3>
+     <br>
+     <form action="https://www.tuitionindia.in/search" method="post" id="searchForm">
+                        <label for="usertype"><strong>Search By:</strong></label>
+
+   <select id="usertype" name="user_type" data-live-search="false">
+      <option value="3" selected="" >Tutor</option>     
+   </select>
+      <label for="class"><strong>Class Level:</strong></label>
+      <select name="class" title="Select Class" data-live-search="true">
+        <option value="">--Select Class--</option>
+        <option value="1to5">I to V </option>
+        <option value="6to8">VI to VIII </option>
+        <option value="9to10">IX to X </option>
+        <option value="11to12_science">XI to XII</option>
+      </select>
+
+      <label for="subject"><strong>Subject:</strong></label>
+<select name="subject" data-live-search="true"><option value="">----Select----</option>
+    <option value="Physics">Physics</option>
+    <option value="Chemistry">Chemistry</option>
+    <option value="Biology">Biology</option>
+    <option value="Science">Science</option>
+    <option value="Mathematics">Mathematics</option>
+    <option value="Bangla">Bangla</option>
+    <option value="English">English</option>
+    <option value="ICT">ICT (Information & Communication Technology)</option>
+    <option value="Higher Math">Higher Math</option>
+    <option value="Accounting">Accounting</option>
+    <option value="Finance & Banking">Finance & Banking</option>
+    <option value="Business Studies">Business Studies</option>
+    <option value="Economics">Economics</option>
+    <option value="History of Bangladesh & World Civilization">History of Bangladesh & World Civilization</option>
+    <option value="Geography & Environment">Geography & Environment</option>
+    <option value="Civics">Civics</option>
+    <option value="Psychology">Psychology</option>
+    <option value="Islamic Studies">Islamic Studies</option>
+    <option value="Arts & Crafts">Arts & Crafts</option>
+    <option value="Physical Education">Physical Education</option>
+    <option value="All Subjects">All Subjects</option>
+  <input type="text" name="current_location" value="" placeholder="Current Location" title="Current Location">
+
+  <input type="submit" class="btn-info" id="submitSearch1" />
+</form>
+    </div>
+   </div>
+   <div class="col-md-9 col-sm-8 col-xs-12">
+    <div class="filter-tutor bg-white pdg-left-right20 pdg-top-bottom30 margin-top-bottom10" data-aos="fade-left">
+     <h3 class="tutor-heading"><ins>OUR</ins> TUTORS</h3>
+    </div>
+    <div id="qbAllContent"></div>
+     
+    <div class="text-center" id="paging1"></div>
+   </div>
+  </div>
+ </div>
+</div>
+<!--Start Footer-->
+   <footer class="ftr-bottom" style="background-color: #1a1a1a; color: #fff; padding: 40px 0;">
+    <div class="container">
+        <div class="row">
+            <!-- Quick Links -->
+            <div class="col-md-3 col-sm-6 col-xs-12" data-aos="fade-up">
+                <h3 class="footer-title" style="color: #f8c200;">Quick Links</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li><a href="index.html" title="Home">Home</a></li>
+                    <li><a href="about.html" title="About Us">About Us</a></li>
+                    <li><a href="how-it-works.html" title="How it Works">How it Works</a></li>
+                    <li><a href="paynow.html">Pay Now</a></li>
+                    <li><a href="contact.html" title="Contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Get Connected -->
+            <div class="col-md-3 col-sm-6 col-xs-12" data-aos="fade-up">
+                <h3 class="footer-title" style="color: #f8c200;">Get Connected</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li><a href="search.html" title="Tutors or Teachers">Tutors or Teachers</a></li>
+                    <li><a href="faqs.html" title="FAQs">FAQs</a></li>
+                    <li style="color: #f8c200; font-weight: bold;">Website Visitors: 928,498</li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="col-md-3 col-sm-6 col-xs-12" data-aos="fade-up">
+                <h3 class="footer-title" style="color: #f8c200;">Newsletter</h3>
+                <p>Subscribe to get our latest updates</p>
+                <form class="contact-us">
+                    <input type="email" name="email" id="footer_email" placeholder="Enter your email" required style="width: 100%; padding: 10px; margin-bottom: 10px;">
+                    <button type="submit" class="btn btn-warning" onclick="return addnewsletter();" style="width: 100%;">Subscribe</button>
+                </form>
+            </div>
+
+            <!-- Social Media -->
+            <div class="col-md-3 col-sm-6 col-xs-12" data-aos="fade-up">
+                <h3 class="footer-title" style="color: #f8c200;">Follow Us</h3>
+                <br>
+                <ul class="social" style="display: flex; gap: 10px; padding: 0;">
+                    <li><a href="https://www.facebook.com/" target="_blank"><i class="icofont-facebook" style="font-size: 24px; color: #f8c200;"></i></a></li>
+                    <li><a href="https://twitter.com/" target="_blank"><i class="icofont-twitter" style="font-size: 24px; color: #f8c200;"></i></a></li>
+                    <li><a href="https://www.linkedin.com/" target="_blank"><i class="icofont-linkedin" style="font-size: 24px; color: #f8c200;"></i></a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank"><i class="icofont-instagram" style="font-size: 24px; color: #f8c200;"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+</footer>
+
+
+<footer class="ftr-bottom" style="background-color: #222; color: #fff; padding: 20px 0;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12 text-left">
+                <p style="margin: 0; font-size: 14px;">
+                    Tuition Hub © 2025 | All Rights Reserved  
+                </p>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 text-right">
+                <a href="privacy-policy.html" style="color: #f8c200; text-decoration: none; margin-right: 15px;">Privacy Policy</a>
+                <a href="terms-and-conditions.html" style="color: #f8c200; text-decoration: none;">Terms & Conditions</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<a href="#home"><i class="icofont icofont-circled-up back-to-top" data-aos="zoom-in-left"></i></a>
+<!--End Footer-->
+<!--Start js-->
+<script src="assets/js/jquery-2.2.4.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/aos.js"></script>
+<script src="assets/js/customize.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+//$(".page-mask").fadeOut("slow");
+
+$("#getServiceModal").on("click",".pager .next button", function(){
+
+    $(".page-mask").fadeIn();
+
+    $("#getServiceModal .error-location").html("");
+    $("#getServiceModal .error-text").html("");
+    $("#getServiceModal .error-mobile").html("");
+    $("#getServiceModal .error-name").html("");
+    $("#getServiceModal .error-email").html("");
+    //$('.pageloader').show();
+    var clength=$("#getServiceModal #getServiceContect .tutor-input").length;
+    var servValue = $('#getServiceModal #getService input[name=get_service]:checked').val();
+    
+    //return false;
+if (clength==0) { //alert(clength);
+
+  if (servValue==undefined || servValue=="") { 
+    $("#getServiceModal .error-text").html("Please select need");
+    $(".page-mask").fadeOut("slow");
+    return false;
+  }
+  
+    jQuery.ajax({
+          url: "https://www.tuitionindia.in/jobs/getService",
+          type: "POST", 
+          data: {get_service:servValue},           
+          success: function(data) 
+            {
+              if (data!="") {
+              $("#getServiceContect").html(data);
+              
+              $("#getServiceModal #getService .tutor-input").removeClass("active");
+              $("#getServiceModal .previous").removeClass("hide");
+
+              $("#getServiceModal #getServiceContect .tutor-input").removeClass("active");
+              $("#getServiceModal #getServiceContect .tutor-input:nth-child(1)").addClass("active");
+              $(".page-mask").fadeOut("slow");
+              }           
+            }
+
+    });
+    
+} //if else(){
+
+//} 
+else{
+  var classesValue = $('#getServiceModal #getServiceContect .tutor-input input[name=classes]:checked').val();
+    var languageValue = $('#getServiceModal #getServiceContect .tutor-input input[name=language]:checked').val();
+  var competitiveValue = $('#getServiceModal #getServiceContect .tutor-input input[name=competitive]:checked').val();
+    var hobbyValue = $('#getServiceModal #getServiceContect .tutor-input input[name=hobby]:checked').val();
+    var subjectsValue = [];
+    $.each($("#getServiceModal #getServiceContect #servSubjects .options input[type=checkbox]:checked"), function(){            
+        subjectsValue.push($(this).val());
+    });
+    var boardsValue = [];
+    $.each($("#getServiceModal #getServiceContect #servBoards .options input[type=checkbox]:checked"), function(){            
+        boardsValue.push($(this).val());
+    });
+    var userTypeValue = $('#getServiceModal #getServiceContect .tutor-input input[name=usertype]:checked').val();
+    // User Details
+    var userLoca = $('#getServiceModal #getServiceContect .tutor-input input[name=location]').val();
+    var userMobl = $('#getServiceModal #getServiceContect .tutor-input input[name=mobile]').val();
+    var userName = $('#getServiceModal #getServiceContect .tutor-input input[name=name]').val();
+    var userMail = $('#getServiceModal #getServiceContect .tutor-input input[name=email]').val();
+
+    var userOtpreturn = $('#getServiceModal #getServiceContect #servUserOTP input[name=otpreturn]').val();
+    var userOtp = $('#getServiceModal #getServiceContect #servUserOTP input[name=otp]').val();
+    //alert(userName);
+    if ($("#getServiceModal #getServiceContect #servClassses").hasClass('active')){
+      if (classesValue==undefined || classesValue=="") { 
+      $("#getServiceModal .error-text").html("Please select Class!");
+      $(".page-mask").fadeOut("slow");
+      return false;
+    }
+  }else if($("#getServiceModal #getServiceContect #servLanguage").hasClass('active')){
+    if (languageValue==undefined || languageValue=="") { 
+      $("#getServiceModal .error-text").html("Please select Language Learning!");
+      $(".page-mask").fadeOut("slow");
+      return false;
+    }
+  }else if($("#getServiceModal #getServiceContect #servCompetitive").hasClass('active')){
+    if (competitiveValue==undefined || competitiveValue=="") { 
+      $("#getServiceModal .error-text").html("Please select Competitive Examination!");
+      $(".page-mask").fadeOut("slow");
+      return false;
+    }
+  }else if($("#getServiceModal #getServiceContect #servHobby").hasClass('active')){
+    if (hobbyValue==undefined || hobbyValue=="") { 
+      $("#getServiceModal .error-text").html("Please select your Hobby & Activity!");
+      return false;
+    }
+  }else if($("#getServiceModal #getServiceContect #servSubjects").hasClass('active')){
+    if (subjectsValue==undefined || subjectsValue=="") { 
+      $("#getServiceModal .error-text").html("Please select your Subject(s)!");
+      $(".page-mask").fadeOut("slow");
+      return false;
+    } 
+  }else if($("#getServiceModal #getServiceContect #servBoards").hasClass('active')){
+    if (boardsValue==undefined || boardsValue=="") { 
+      $("#getServiceModal .error-text").html("Please select your Board(s)!");
+      $(".page-mask").fadeOut("slow");
+      return false;
+    }
+  }else if($("#getServiceModal #getServiceContect #servUserType").hasClass('active')){
+    if (userTypeValue==undefined || userTypeValue=="") { 
+      $("#getServiceModal .error-text").html("Please Tell us about yourself to serve you better!");
+      $(".page-mask").fadeOut("slow");
+      return false;
+    }
+    $("#getServiceModal .pager .next button").html("Submit");
+    
+  }else if($("#getServiceModal #getServiceContect #servUserDetails").hasClass('active')){
+    if (userLoca==undefined || userLoca=="") { 
+      $("#getServiceModal .error-location").html("Please enter your Locality!");
+    }
+    var phoneno = /^\d{10}$/;
+    if (userMobl==undefined || userMobl=="") { 
+      $("#getServiceModal .error-mobile").html("Please enter your Contact No.!");
+    }else{
+      if(!userMobl.match(phoneno)){
+        $("#getServiceModal .error-mobile").html("Please enter a valid Contact No.!");  
+      }
+    }
+    
+    if (userName==undefined || userName=="") { 
+      $("#getServiceModal .error-name").html("Please enter your Name!");
+    }
+    if (validateEmail(userMail)) {
+            $("#getServiceModal .error-email").html("");
+        }else{
+          if (userMail==undefined || userMail=="") { 
+        //$("#getServiceModal .error-email").html("Please enter your Email!<br>");
+      }else{
+              $("#getServiceModal .error-email").html("Please enter a valid Email!<br>");
+              $(".page-mask").fadeOut("slow");
+              return false;
+            }
+        }
+    if(userLoca==undefined || userLoca=="" || userMobl==undefined || userMobl=="" || userName==undefined || userName=="" || !userMobl.match(phoneno)){
+      $(".page-mask").fadeOut("slow");
+      return false;
+    }
+
+$("#getServiceModal .pager .next").addClass("hide");
+
+    var formData=$('#getServiceModal .serviceForm').serialize();
+    console.log(formData);
+    // return false;
+      jQuery.ajax({
+          url: "https://www.tuitionindia.in/jobs/getServicePost",
+          type: "POST", 
+          data: formData,           
+          success: function(data) 
+            { //alert(data);
+              if (data==1) {
+                $("#getServiceModal #getServiceContect").html("");
+              
+                $("#getServiceModal #getService .tutor-input").addClass("active");
+                $("#getServiceModal .pager .next button").html('Next <i class="icofont icofont-double-right"></i>');
+                $('#enquiryModal').modal('hide');
+               
+                   open("thank-you.html", "_self");
+
+              }else{
+                  $("#getServiceModal .pager .next").removeClass("hide");
+              }          
+            }
+    });
+      $(".page-mask").fadeOut("slow");
+      return false;
+
+
+  }
+  else if($("#getServiceModal #getServiceContect #servUserOTP").hasClass('active')){
+    $("#getServiceModal .pager .next").addClass("hide");
+    if (userOtpreturn==undefined || userOtpreturn=="") { 
+      $("#getServiceModal .error-text").html("OTP not genrated!");
+      $(".page-mask").fadeOut("slow");
+      return false;
+    }else if(userOtpreturn!=userOtp){
+      $("#getServiceModal .error-text").html("OTP not matched!");
+      $(".page-mask").fadeOut("slow");
+      return false;
+    }    
+
+  }
+  
+
+  $("#getServiceModal #getServiceContect .active").next().addClass("active");
+  $("#getServiceModal #getServiceContect .active").prev().removeClass("active");
+
+   $(".page-mask").fadeOut("slow");
+}
+//
+    return false;
+});
+//On Click Get Tutor Next End
+
+//On Click Get Tutor previous
+    $("#getServiceModal").on("click",".pager .previous", function(){
+
+      if ($("#getServiceModal #getServiceContect #servClassses").hasClass('active')){
+        $("#getServiceModal .pager .previous").addClass("hide");
+        $("#getServiceModal #getService .tutor-input").addClass("active");
+        $("#getServiceModal #getServiceContect").html("");
+    }else if($("#getServiceModal #getServiceContect #servLanguage").hasClass('active')){
+      $("#getServiceModal .pager .previous").addClass("hide");
+        $("#getServiceModal #getService .tutor-input").addClass("active");
+        $("#getServiceModal #getServiceContect").html("");
+    }else if($("#getServiceModal #getServiceContect #servCompetitive").hasClass('active')){
+      $("#getServiceModal .pager .previous").addClass("hide");
+        $("#getServiceModal #getService .tutor-input").addClass("active");
+        $("#getServiceModal #getServiceContect").html("");
+    }else if($("#getServiceModal #getServiceContect #servHobby").hasClass('active')){
+      $("#getServiceModal .pager .previous").addClass("hide");
+        $("#getServiceModal #getService .tutor-input").addClass("active");
+        $("#getServiceModal #getServiceContect").html("");
+    }else{
+      $("#getServiceModal #getServiceContect .active").prev().addClass("active");
+      $("#getServiceModal #getServiceContect .active").next().removeClass("active");
+    }
+      $("#getServiceModal .pager .next button").html('Next <i class="icofont icofont-double-right"></i>');
+      return false;
+  });
+
+//On Click Get Tutor previous End
+
+//On Click Get Tutor changeNumber
+    $("#getServiceModal").on("click","#getServiceContect #servUserOTP .changeNumber", function(){
+      $("#getServiceModal .pageloader").show();
+      if ($("#getServiceModal #getServiceContect #servUserOTP").hasClass('active')){
+
+        $("#getServiceModal .pager .previous").removeClass("hide");
+        $("#getServiceModal .pager .next button").html('Next <i class="icofont icofont-double-right"></i>');
+        $("#getServiceModal #getServiceContect .active").prev().addClass("active");
+      $("#getServiceModal #getServiceContect .active").next().removeClass("active");
+        $('#getServiceModal #getServiceContect .tutor-input input[name=mobile]').val("")
+        $('#getServiceModal #getServiceContect #servUserOTP input[name=otpreturn]').val("");
+        $('#getServiceModal #getServiceContect #servUserOTP input[name=otp]').val("");
+        $("#getServiceModal #getServiceContect #servUserOTP .servUserMob").html("xxxxxxxxxx");
+    }
+      $(".page-mask").fadeOut("slow");
+      return false;
+  });
+
+//On Click Get Tutor changeNumber End
+
+//On Click Get Tutor Next
+   $("#getServiceModal").on("click",".tutor-input .coment-box .addYourComment", function(){
+//alert("aaaa");
+      //$(this).parent(".coment-box").children("textarea").show();
+      if ($("#getServiceModal .tutor-input .coment-box .input-group").hasClass("hide")) {
+        $("#getServiceModal .tutor-input .coment-box .input-group").removeClass("hide");
+        $("#getServiceModal .tutor-input .coment-box .addYourComment .icofont").removeClass("icofont-circled-right").addClass("icofont-circled-down");
+      } else{
+        $("#getServiceModal .tutor-input .coment-box .input-group").addClass("hide");
+        $("#getServiceModal .tutor-input .coment-box .addYourComment .icofont").removeClass("icofont-circled-down").addClass("icofont-circled-right");
+      }
+
+    $(".page-mask").fadeOut("slow"); 
+      return false;
+  });
+//On Click Get Tutor Next End
+
+//On Click Get Tutor Next
+   $("#getServiceModal").on("click",".active .options input[value=Other]", function(){
+//alert("aaaa");
+
+    var testq = $('#getServiceModal #getServiceContect .active .options input[value=Other]:checked').val();
+    //alert(testq);
+    if (testq == "Other") {
+      $(this).parents(".options").children(".optionshide").show();
+    }else{
+      $(this).parents(".options").children(".optionshide").hide().val("");
+    }
+      
+  });
+//On Click Get Tutor Next End
+
+//On Click Get resend OTP
+   $("#getServiceModal").on("click",".active .options .resendOTP", function(){
+//alert("aaaa");
+    $("#getServiceModal .pageloader").show();
+    var userMobl = $('#getServiceModal #getServiceContect .tutor-input input[name=mobile]').val();
+    jQuery.ajax({
+          url: "https://www.tuitionindia.in/jobs/generatePIN",
+          type: "POST", 
+          data: {"userMobile":userMobl},           
+          success: function(data) 
+            { 
+              if (data!="") { //alert(data);
+                $("#getServiceModal #servUserOTP .error-otp").html("OTP Resend Successfully!");
+                $("#getServiceModal #servUserOTP #otpreturn").val(data);
+                setTimeout(function(){ $("#getServiceModal #servUserOTP .error-otp").html("Please wait at least 1 minutes before requesting another code."); },3000);
+              }else{
+                //$("#getServiceModal #servUserOTP #otpreturn").val("");
+                
+              }           
+            }
+    });
+    $(".page-mask").fadeOut("slow");
+      return false;
+  });
+
+});
+
+
+function validateEmail(sEmail) {
+    var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+    if (filter.test(sEmail)) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+	// Check Number Input
+	function isNumberKey(evt){
+	    var charCode = (evt.which) ? evt.which : event.keyCode
+	    if (charCode > 31 && (charCode < 48 || charCode > 57))
+	        return false;
+	    return true;
+	}
+	function addnewsletter() {
+      
+       email = $("#footer_email").val();
+        $.ajax({
+			 url : "https://www.tuitionindia.in/user/addnewsletter",
+          type: "POST",
+          data: {'email':email },
+		  dataType: 'html',
+           success: function(data){
+         
+           $("#footer_email_msg").html(data);
+           }, 
+		   error: function(){
+		   alert("there is error");
+		   }
+         });
+		return false; 
+       }
+
+// Start Google location 
+      var placeSearch, autocomplete;
+var componentForm = {
+        postal_code: 'short_name'
+      };      
+      function initAutocomplete() {
+        autocomplete = new google.maps.places.Autocomplete(
+            /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
+            {types: ['geocode']});
+
+        //autocomplete.addListener('place_changed', fillInAddress);
+      }
+
+ function initAutocomplete2() {
+        autocomplete = new google.maps.places.Autocomplete(
+            /** @type {!HTMLInputElement} */(document.getElementById('autocomplete2')),
+            {types: ['geocode']});
+        autocomplete.addListener('place_changed', fillInAddress);
+    } 
+function initAutocomplete3() {
+        autocomplete = new google.maps.places.Autocomplete(
+            /** @type {!HTMLInputElement} */(document.getElementById('autocomplete3')),
+            {types: ['geocode']});
+    } 
+function initAutoLocation(id) {
+        autocomplete = new google.maps.places.Autocomplete(
+            /** @type {!HTMLInputElement} */(document.getElementById('autoLocation'+id)),
+            {types: ['geocode']});
+    }      
+function fillInAddress() {
+        // Get the place details from the autocomplete object.
+        var place = autocomplete.getPlace();
+
+        for (var component in componentForm) {
+          document.getElementById(component).value = '';
+          document.getElementById(component).disabled = false;
+        }
+
+        // Get each component of the address from the place details
+        // and fill the corresponding field on the form.
+        for (var i = 0; i < place.address_components.length; i++) {
+          var addressType = place.address_components[i].types[0];
+          if (componentForm[addressType]) {
+            var val = place.address_components[i][componentForm[addressType]];
+            document.getElementById(addressType).value = val;
+          }
+        }
+      }
+// End Google location
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCz33BT8mfejqfVo_ddE461bn6znGkCgIw&amp;libraries=places&amp;callback=initAutocomplete" async defer></script><!--End js-->
+<script type="text/javascript">
+
+$(window).load(function() {
+      
+    $('.page-mask').fadeIn();
+    
+    var formData=$('#searchForm').serialize();
+      jQuery.ajax({
+          type: "POST",
+          url: "https://www.tuitionindia.in/search/userType", //here we are calling our user controller and get_category method with the category_id
+          data: formData,           
+          success: function(response) //we're calling the response json array 'category'
+            {
+              console.log(response);
+              $('.page-mask').fadeOut();
+              contentResult=$(response).filter('#contentResult');
+              pagingResult=$(response).filter('#pagingResult');
+        $('#qbAllContent').html(contentResult).fadeIn("slow");
+        $('#paging1').html(pagingResult).fadeIn("slow");             
+            }
+
+          });
+    return false;
+});
+
+
+$(document).ready(function(){
+
+//On Click Search
+    $("#submitSearch1").click(function(){
+      
+    $('.page-mask').fadeIn();  
+    var formData=$('#searchForm').serialize();
+    console.log(formData);
+    jQuery.ajax({
+          type: "POST",
+          url: "https://www.tuitionindia.in/search/userType", //here we are calling our user controller and get_category method with the category_id
+          data: formData,           
+          success: function(response) //we're calling the response json array 'category'
+            {
+              $('.page-mask').fadeOut();
+              contentResult=$(response).filter('#contentResult');
+              pagingResult=$(response).filter('#pagingResult');
+        $('#qbAllContent').html(contentResult).fadeIn("slow");
+        $('#paging1').html(pagingResult).fadeIn("slow");             
+            }
+
+          });
+    return false;
+    });
+//On Click Search End
+
+    $("#paging1").on("click",".pagination li a", function(){
+      
+    //var jobid=$(this).parent("div").attr('id');
+    var pageurl=$(this).attr('href');
+    if (pageurl=="") {return false;}
+    $('.page-mask').fadeIn();
+    
+    var formData=$('#searchForm').serialize();
+    console.log(formData);
+    jQuery.ajax({
+          type: "POST",
+          url: pageurl, //here we are calling our user controller and get_category method with the category_id
+          data: formData,           
+          success: function(data) //we're calling the response json array 'category'
+            {
+              $('.page-mask').fadeOut();
+              contentResult = $(data).filter("#contentResult");
+              pagingResult = $(data).filter("#pagingResult");
+        $('#qbAllContent').html(contentResult).fadeIn("slow");
+        $('#paging1').html(pagingResult).fadeIn("slow");             
+            }
+
+          });
+    return false;
+    });
+//On Click paging End
+  
+});
+
+function contacttutorMail(){
+
+    var tutor_id=$("#contacttutorModal form input[name=tutor_id]").attr('value'); 
+    if (tutor_id=="") {
+      return false;
+    }
+    
+    $("#messageModal .message").html("");
+    $('.pageloader').show();  
+    //var formData2 = new FormData($('#contact-form')[0]);
+    var formData2=$('#contact-form').serialize();
+    console.log(formData2);
+    jQuery.ajax({
+          url: "https://www.tuitionindia.in/tutor/tutor_mails/"+tutor_id, 
+          type: "POST",
+          data: formData2,
+          // processData: false,
+          // contentType: false,           
+          success: function(response) 
+            {
+              $('.pageloader').hide();
+              var errortype=$(response).filter('#errortype').text();
+              var message=$(response).filter('#message').text();
+              
+              if (errortype==1) {
+                message='<p style="color:red;">* '+message+'</p>';
+                $("#contacttutorModal .message").html(message);
+              } else if(errortype==2){
+
+                message='<p style="color:green;">* '+message+'</p>';
+
+                $("#contacttutorModal .message").html(message);
+                $("#contacttutorModal form input[name=tutor_id]").attr('value','');
+
+                window.setTimeout(function(){ $("#contacttutorModal").modal("hide"); },2000);
+
+              } else if(errortype==3){
+                message='<p style="color:red;"> '+message+'</p>';
+                $("#contacttutorModal .message").html(message);
+
+                window.setTimeout(function(){ $("#contacttutorModal").modal("hide"); },2000);
+              }
+              
+                         
+            }
+
+          });
+    return false;
+//});
+}
+//On Click Contact Submit End
+
+//On Click Contact box
+  $("#qbAllContent").on("click",".applyTutor", function(){
+    var tutor_id = $(this).attr("data");
+    if (tutor_id=="") {
+      return false;
+    }
+    $("#contacttutorModal form input[name=tutor_id]").attr("value", tutor_id);
+    $("#contacttutorModal .message").html("");
+  });
+</script>
+</body>
+</html>

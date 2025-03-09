@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry Modal</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        /* Custom Styling */
+        .checkbox-container {
+            display: block;
+            padding: 5px 0;
+        }
+        .modal-header {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Button to Open the Modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#enquiryModal">
+    Open Enquiry Modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="enquiryModal" tabindex="-1" role="dialog" aria-labelledby="enquiryModalLabel">
+    <div class="modal-dialog" role="document">
+    
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Enquiries for Tuitions</h4>
+          <h5 class="modal-title">Kindly Choose the Relevant Options</h5>
+        </div>
+
+        <form id="radio-demo" class="serviceForm">
+            <div class="modal-body">
+                <!-- Start form content -->
+                <div id="getService">
+                    <div class="tutor-input active">
+                        <h4>What service do you need? <span style="color: red;">*</span></h4>
+                        <div class="tutor-input-opt" style="padding-left: 30px;">
+                            <label class="checkbox-container">Class XI to XII Tuitions
+                                <input type="radio" name="get_service" value="11to12">
+                                <span class="checkmark radio"></span>
+                            </label>
+                            <label class="checkbox-container">Class IX to X Tuitions
+                                <input type="radio" name="get_service" value="9to10">
+                                <span class="checkmark radio"></span>
+                            </label>
+                            <label class="checkbox-container">Class VI to VIII Tuitions
+                                <input type="radio" name="get_service" value="6to8">
+                                <span class="checkmark radio"></span>
+                            </label>
+                            <label class="checkbox-container">Class I to V Tuitions
+                                <input type="radio" name="get_service" value="1to5">
+                                <span class="checkmark radio"></span>
+                            </label>
+                            <label class="checkbox-container">Language Learning
+                                <input type="radio" name="get_service" value="Language">
+                                <span class="checkmark radio"></span>
+                            </label>
+                            <label class="checkbox-container">Competitive Exams
+                                <input type="radio" name="get_service" value="Competitive">
+                                <span class="checkmark radio"></span>
+                            </label>
+                            <label class="checkbox-container">Hobby & Activity
+                                <input type="radio" name="get_service" value="Hobby">
+                                <span class="checkmark radio"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!-- End form content -->
+
+                <span class="error-text" style="color:red;padding:0 15px;"></span>
+            </div>
+
+            <div class="modal-footer">
+                <ul class="pager" style="margin:0;">
+                    <li class="previous hide">
+                        <button class="btn btn-info pull-left"><i class="glyphicon glyphicon-chevron-left"></i> Back</button>
+                    </li>
+                    <a href="terms-and-conditions.html" target="_blank" style="color:#666; font-size:12px;">T&amp;C apply</a>
+                    <li class="pull-right next">
+                        <button type="submit" class="btn btn-primary">Next <i class="glyphicon glyphicon-chevron-right"></i></button>
+                    </li>
+                </ul>
+            </div>
+        </form>        
+      </div>
+      
+    </div>
+</div>
+
+<!-- Initialize Modal Manually (Optional) -->
+<script>
+    $(document).ready(function(){
+        $("#enquiryModal").modal({ show: false }); // Ensures it doesn’t auto-show
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+@charset "utf-8";
+/* CSS Document */
+@media(max-width:991px){	
+.reference-icon{
+		font-size:50px;}
+	
+}
+
+@media(max-width:768px){
+.navbar-brand{
+	width:120px;}
+
+.navbar-nav{
+	margin:0 -15px;}
+	
+.navbar-inverse .navbar-nav>li>a{
+	background:#033771;
+	color:white;
+	padding:10px;
+	border-top: 1px solid #034c9c;
+    border-bottom: 1px solid #021e3c;}
+	
+.navbar-inverse .navbar-nav>li>.navbtn{
+	margin:0;
+	display:inline-block;}
+		
+.navbtn{
+	color:white !important;}
+	
+.bdr-center:before{
+	bottom:5px;}
+	
+.active .bdr-center:before, .bdr-center:hover:before, .bdr-center:focus:before, .bdr-center:active:before{
+	display:none;}
+	
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover{
+	background:#033771;
+	color:white;}
+	
+.item h2{
+	font-size:24px;
+	margin:15px 0;}
+
+.item h4{
+	font-size:16px;}
+		
+.recent-tutor, .recent-tutor img{
+	border-radius:0 0 10px 10px;}
+
+.tutor-img{
+	height:140px;}
+
+.list-contant{
+	margin-bottom:5px;}
+	
+.list-contant h4{
+	margin-bottom:5px;}
+	
+h2{
+	font-size:24px;}
+
+.pdg-top-bottom30{
+	padding-top:15px;
+	padding-bottom:15px;}	
+
+.pdg-top-bottom15{
+	padding-top:7px;
+	padding-bottom:7px;}
+	
+.reviewer{
+	margin:7px 0;}
+	
+.choose-us{
+	background:none;}
+	
+.reviewer-name{
+	margin:0;}
+
+.landing-container{
+	padding:0;}
+
+.landing-logo{
+	width:100px;}
+
+.landing-contact{
+	padding:10px 0;}
+
+.landin-header{
+	right:0;}
+
+.landin-form, .landin-header h1{
+	background-color:rgba(0000, 0, 0, 0.3);}
+
+.landin-form input, .landin-form select{
+	background-color:rgba(255, 255, 255, 0.3);}
+
+.landing-inner .item{
+	background-position:bottom center !important;}
+
+.refer-inner .item{
+	background-position:bottom right !important;}
+
+.landin-header h1{
+	margin-top:50px;}
+
+.refer-hints{
+		width:100%;
+		padding-bottom: 10px;
+		position: relative;}
+	
+.refer-hints h1{
+		margin-top:0;}
+
+	
+}
+
+
+@media(max-width:412px){
+.blink {
+    right: -27px;
+    padding: 0px 5px;
+    border-radius: 0 0 3px 3px;
+    width: 77px;
+    overflow: hidden;}
+
+.blink li{
+	font-family:sans-serif;
+	font-weight:bold;
+	font-size:18px;}
+
+}
+
+@-moz-document url-prefix() {
+.blink{
+	right:-70px;}
+.blink li{
+    font-family:sans-serif;
+	font-weight:bold;
+	font-size:18px;
+  }
+}
